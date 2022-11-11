@@ -42,6 +42,7 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           name="name"
           value={user.name}
           onChange={onUserChange}
+          required
         />
       </div>
       <div className="form-group mb-3">
@@ -52,6 +53,7 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           name="email"
           value={user.email}
           onChange={onUserChange}
+          required
         />
       </div>
       <div className="form-group mb-3">
@@ -62,6 +64,7 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           name="checkbox"
           value={user.name}
           onChange={onCheckboxChange}
+          required
           />
       </div>
       <div className="form-group mb-3">
@@ -69,6 +72,7 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           className="form-group"
           name="selectUser"
           onChange={onUserChange}
+          required
         >
           <option disabled selected value=''>Select user</option>
           <option value={'User'}>User</option>
