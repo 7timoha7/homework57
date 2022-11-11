@@ -26,14 +26,14 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
     })
   }
 
-  const onCheckboxChange = (e:React.ChangeEvent<HTMLInputElement>)=>{
+  const onCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {checked} = e.target;
     setUser(prev => ({...prev, active: checked}))
   }
 
   return (
     <form onSubmit={onFormSubmit} className={'border border-danger border-4 p-3'}>
-      <h4>Name</h4>
+      <h4>Enter user data</h4>
       <div className="form-group mb-3">
         <label htmlFor="name" className='me-2'>Name</label>
         <input
@@ -64,10 +64,10 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           name="checkbox"
           value={user.name}
           onChange={onCheckboxChange}
-          required
-          />
+        />
       </div>
       <div className="form-group mb-3">
+        <label htmlFor='selectUser' className='me-4'>User option</label>
         <select
           className="form-group"
           name="selectUser"

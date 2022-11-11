@@ -6,11 +6,11 @@ interface Props {
   users: UserClone[];
 }
 
-const Users:React.FC<Props> = ({users}) => {
+const Users: React.FC<Props> = ({users}) => {
   return (
     <div className='border border-danger border-4 p-3'>
-      <h4>User</h4>
-      {users.map((user)=>{
+      <h4>User cards:</h4>
+      {users.map((user) => {
         return (
           <UserItem user={user} key={user.id}/>
         )
